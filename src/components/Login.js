@@ -50,7 +50,7 @@ function Login(){
         <>
          <div class="wrapper fadeInDown">
         <div id="formContent">                  
-            <h1>ADMIN LOGIN</h1>
+            <h1>ADMIN-LOGIN</h1>
             <input type="text" id="username" value={data.username} onChange={(e)=>{
                 setvalue(e)}} class="fadeIn second" placeholder="username"/>
             <input type="password" id="password" value={data.password} onChange={(e)=>{
