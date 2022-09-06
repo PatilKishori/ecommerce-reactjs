@@ -38,7 +38,7 @@ const Variety = () => {
     function deleteProductVariety(e, dvariety) {
         e.preventDefault();
         if(window.confirm("Sure to delete?")){
-            axios.post("http://localhost:8081/product/deletevariety", { data: { id: id, variety: dvariety } }).then((res) => {
+            axios.post("http://localhost:8081/product/deletevarieties", { data: { id: id, variety: variety } }).then((res) => {
                 load();
             })
         }
@@ -46,7 +46,7 @@ const Variety = () => {
 
     function saveVariety(e) {
         e.preventDefault();
-        axios.post("http://localhost:8081/product/savevarieties", { data: { id: id, variety: variety } }).then((res) => {
+        axios.post("http://localhost:8081/product/savevariety", { data: { id: id, variety: variety } }).then((res) => {
             load();
         });
     }
@@ -62,8 +62,8 @@ const Variety = () => {
         <div>
             <div className='breadcrumbs'>
                 <p className='bread'>
-                    
-                    <span><NavLink to="/admin/products"> Products </NavLink></span> /<span>Varieties </span>
+                   
+                    <span><NavLink to="/admin/products"> Products </NavLink></span> /<span>Variety </span>
                 </p>
                 <h1 className='text-center my-3 display-4'>Product : {productname}</h1>
             </div>
